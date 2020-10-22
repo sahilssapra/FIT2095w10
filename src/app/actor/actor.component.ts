@@ -17,6 +17,8 @@ export class ActorComponent implements OnInit {
   title: string = "";
   year: number = 0;
   aYear: number = 0;
+  act: any[] = [];
+  movieName: string = "";
   constructor(private dbService: DatabaseService) {}
   //Get all Actors
   onGetActors() {
@@ -104,7 +106,9 @@ export class ActorComponent implements OnInit {
         this.onDeleteMovie(this.moviesDB[i])
       }
     }
+
   }
+  
   
   
   

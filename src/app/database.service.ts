@@ -38,7 +38,7 @@ export class DatabaseService {
     return this.http.delete(url, httpOptions);
   }
   updateMovie(id, data) {
-    let url = "/actors/" + id + "/movies/";
+    let url = "/movies/" + id + "/actors/";
     return this.http.post(url, data, httpOptions);
   }
  

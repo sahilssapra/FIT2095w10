@@ -1,0 +1,50 @@
+<div>
+    <table class="table table-striped">
+      <tr>
+        <th>Actor Name</th>
+        <th>Birth Year</th>
+        <th>Select!</th>
+      </tr>
+      <tr *ngFor="let item of actorsDB">
+        <td>{{item.name}}</td>
+        <td>{{item.bYear}}</td>
+        <td><button type="submit" class="btn btn-primary" (click)="onSelectUpdate(item)">Select</button></td>
+      </tr>
+    </table>
+    <table class="table table-striped">
+      <tr>
+        <th>Movie Title</th>
+        <th>Release Year</th>
+        <th>Select!</th>
+      </tr>
+      <tr *ngFor="let item1 of moviesDB">
+        <td>{{item1.title}}</td>
+        <td>{{item1.year}}</td>
+        <td><button type="submit" class="btn btn-primary" (click)="onSelectMovie(item1)">Select</button></td>
+      </tr>
+    </table>
+    <hr>
+    <div *ngIf="actorsDB.length>0">
+      <div class="form-group">
+        <label for="actorName">Full Name</label>
+        <input type="text" class="form-control" id="actorName" [(ngModel)]="fullName">
+      </div>
+      <div class="form-group">
+        <label for="actorName">Birth Year</label>
+        <input type="number" class="form-control" id="actorName" [(ngModel)]="bYear">
+      </div>
+      <div class="form-group">
+        <label for="actorName">Movie Title</label>
+        <input type="text" class="form-control" id="actorName" [(ngModel)]="fullTitle">
+      </div>
+      <div class="form-group">
+        <label for="actorName">Birth Year</label>
+        <input type="number" class="form-control" id="actorName" [(ngModel)]="year">
+      </div>
+      
+
+      <button type="submit" class="btn btn-primary" (click)="onAddAtoM()">Add Actor to Movie</button>
+    </div>
+
+
+  </div>
